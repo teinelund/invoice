@@ -1,0 +1,19 @@
+This application stores information on payed invoice. It is aimed for people living in Sweden and aimed for non-business use. That is, it is aimed to be used for people that want to get control of their bills of their home economy.
+
+'invoice' is written in Python, so you need to have Pyhton 2.x installed.
+
+Usage:
+write 'python invoice.py --help' or 'python invoice.py -h' to display the help page.
+
+First store all companies and organisations that sends invoice and bills to you. You list stored companies by 'python invoice.py --item c --action list'. To add a new company use 'python invoice.py --item c --action add'.
+
+There are two invoice types: automatic and ordinary. The ordinary invoice comes in two types: ordinary and periodical.
+
+Automatic invoices. These invoices are payed automaticaly, often every month, by giro or drawn automaticaly from your account (like the Spotify subscription). To list automatic invoices use 'python invoice.py --item a --action list'. To add a new automatic invoice use 'python invoice.py --item a --action add'.
+
+Periodical invoice. These invoices are invoices that you know will be sent to you from companies regularly in known intervalls. Examples are: internet invoice, cellphone invoice, electricity invoice, apartment rent, insurance invoice and more. These are payed each month, every second month, every quarter, every half year or each year. To list periodical invoices use 'python invoice.py --item p --action list'. To add a new periodical invoice use 'python invoice.py --item p --action add'.
+
+Ordinary invoices are those that are not periodical. You bought a service or item that is not a subscription (and there fore not periodical) and that is payed by giro. To see all payed invoices use 'python invoice.py --item i --action list'. To add a new ordinary invoice use 'python invoice.py --item i --action add'.
+
+This program will create a folder, '.invoice', in you HOME folder on your computer. In the folder .invoice, it will create four files that will store information about payed invoices.
+
